@@ -1,0 +1,733 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		95284ACF1CF014F200D53D27 /* PetTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95284ACE1CF014F200D53D27 /* PetTable.swift */; };
+		95284AD31CF0216800D53D27 /* PetTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95284AD21CF0216800D53D27 /* PetTableCell.swift */; };
+		95284AD91CF02C5C00D53D27 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95284AD81CF02C5C00D53D27 /* CloudKit.framework */; };
+		95284ADC1CF0844E00D53D27 /* FireBasePetTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95284ADB1CF0844E00D53D27 /* FireBasePetTable.swift */; };
+		95284ADE1CF0847800D53D27 /* FireBasePetTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95284ADD1CF0847800D53D27 /* FireBasePetTableCell.swift */; };
+		952964BC1CEF455D0014C941 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952964BB1CEF455D0014C941 /* AppDelegate.swift */; };
+		952964BE1CEF455D0014C941 /* AddPet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952964BD1CEF455D0014C941 /* AddPet.swift */; };
+		952964C11CEF455D0014C941 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952964BF1CEF455D0014C941 /* Main.storyboard */; };
+		952964C41CEF455D0014C941 /* NotebookAnimal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 952964C21CEF455D0014C941 /* NotebookAnimal.xcdatamodeld */; };
+		952964C61CEF455D0014C941 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 952964C51CEF455D0014C941 /* Assets.xcassets */; };
+		952964C91CEF455D0014C941 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952964C71CEF455D0014C941 /* LaunchScreen.storyboard */; };
+		952964D41CEF455D0014C941 /* NotebookAnimalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952964D31CEF455D0014C941 /* NotebookAnimalTests.swift */; };
+		952964DF1CEF455D0014C941 /* NotebookAnimalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952964DE1CEF455D0014C941 /* NotebookAnimalUITests.swift */; };
+		952F843A1CFB296200640CFA /* Kinds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952F84391CFB296200640CFA /* Kinds.swift */; };
+		953EB9881CF9545300102B82 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953EB9871CF9545300102B82 /* Firebase.framework */; };
+		953EB98A1CF956C000102B82 /* Pets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953EB9891CF956C000102B82 /* Pets.swift */; };
+		95F8E23B1CF626E9000F5E97 /* KindOfAnimal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F8E2371CF626E9000F5E97 /* KindOfAnimal+CoreDataProperties.swift */; };
+		95F8E23C1CF626E9000F5E97 /* KindOfAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F8E2381CF626E9000F5E97 /* KindOfAnimal.swift */; };
+		95F8E23D1CF626E9000F5E97 /* NotebookAnimal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F8E2391CF626E9000F5E97 /* NotebookAnimal+CoreDataProperties.swift */; };
+		95F8E23E1CF626E9000F5E97 /* NotebookAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F8E23A1CF626E9000F5E97 /* NotebookAnimal.swift */; };
+		A06C0118798F219B08F26848 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C96D9AFA6AB970D34A58871 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		952964D01CEF455D0014C941 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 952964B01CEF455D0014C941 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 952964B71CEF455D0014C941;
+			remoteInfo = NotebookAnimal;
+		};
+		952964DB1CEF455D0014C941 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 952964B01CEF455D0014C941 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 952964B71CEF455D0014C941;
+			remoteInfo = NotebookAnimal;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4C2DCC14B496EEE0A77C95C6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		95284ACE1CF014F200D53D27 /* PetTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetTable.swift; sourceTree = "<group>"; };
+		95284AD21CF0216800D53D27 /* PetTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetTableCell.swift; sourceTree = "<group>"; };
+		95284AD81CF02C5C00D53D27 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		95284ADA1CF06FB600D53D27 /* NotebookAnimal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = NotebookAnimal.entitlements; sourceTree = "<group>"; };
+		95284ADB1CF0844E00D53D27 /* FireBasePetTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireBasePetTable.swift; sourceTree = "<group>"; };
+		95284ADD1CF0847800D53D27 /* FireBasePetTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireBasePetTableCell.swift; sourceTree = "<group>"; };
+		952964B81CEF455D0014C941 /* NotebookAnimal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotebookAnimal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		952964BB1CEF455D0014C941 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		952964BD1CEF455D0014C941 /* AddPet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPet.swift; sourceTree = "<group>"; };
+		952964C01CEF455D0014C941 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		952964C31CEF455D0014C941 /* NotebookAnimal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotebookAnimal.xcdatamodel; sourceTree = "<group>"; };
+		952964C51CEF455D0014C941 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		952964C81CEF455D0014C941 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		952964CA1CEF455D0014C941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		952964CF1CEF455D0014C941 /* NotebookAnimalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotebookAnimalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		952964D31CEF455D0014C941 /* NotebookAnimalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookAnimalTests.swift; sourceTree = "<group>"; };
+		952964D51CEF455D0014C941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		952964DA1CEF455D0014C941 /* NotebookAnimalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotebookAnimalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		952964DE1CEF455D0014C941 /* NotebookAnimalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookAnimalUITests.swift; sourceTree = "<group>"; };
+		952964E01CEF455D0014C941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		952F84391CFB296200640CFA /* Kinds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kinds.swift; sourceTree = "<group>"; };
+		953EB9871CF9545300102B82 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = "DerivedData/NotebookAnimal/Build/Products/Debug-iphonesimulator/Firebase.framework"; sourceTree = "<group>"; };
+		953EB9891CF956C000102B82 /* Pets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pets.swift; sourceTree = "<group>"; };
+		955AE50D1CF86CB000902398 /* libFirebase.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFirebase.a; path = "DerivedData/NotebookAnimal/Build/Products/Debug-iphonesimulator/libFirebase.a"; sourceTree = "<group>"; };
+		955AE50F1CF86D6600902398 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = Pods/Firebase/Firebase.framework; sourceTree = "<group>"; };
+		95F8E2371CF626E9000F5E97 /* KindOfAnimal+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "KindOfAnimal+CoreDataProperties.swift"; path = "../KindOfAnimal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		95F8E2381CF626E9000F5E97 /* KindOfAnimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KindOfAnimal.swift; path = ../KindOfAnimal.swift; sourceTree = "<group>"; };
+		95F8E2391CF626E9000F5E97 /* NotebookAnimal+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotebookAnimal+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		95F8E23A1CF626E9000F5E97 /* NotebookAnimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotebookAnimal.swift; sourceTree = SOURCE_ROOT; };
+		9C96D9AFA6AB970D34A58871 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF075CB2459442811680C862 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		952964B51CEF455D0014C941 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				953EB9881CF9545300102B82 /* Firebase.framework in Frameworks */,
+				95284AD91CF02C5C00D53D27 /* CloudKit.framework in Frameworks */,
+				A06C0118798F219B08F26848 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		952964CC1CEF455D0014C941 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		952964D71CEF455D0014C941 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		952964AF1CEF455D0014C941 = {
+			isa = PBXGroup;
+			children = (
+				952964BA1CEF455D0014C941 /* NotebookAnimal */,
+				952964D21CEF455D0014C941 /* NotebookAnimalTests */,
+				952964DD1CEF455D0014C941 /* NotebookAnimalUITests */,
+				952964B91CEF455D0014C941 /* Products */,
+				BAC09AE41FC893BC09FA6AD4 /* Pods */,
+				DE7E3F91A82C33C58CFC039D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		952964B91CEF455D0014C941 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				952964B81CEF455D0014C941 /* NotebookAnimal.app */,
+				952964CF1CEF455D0014C941 /* NotebookAnimalTests.xctest */,
+				952964DA1CEF455D0014C941 /* NotebookAnimalUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		952964BA1CEF455D0014C941 /* NotebookAnimal */ = {
+			isa = PBXGroup;
+			children = (
+				952964BB1CEF455D0014C941 /* AppDelegate.swift */,
+				952CC7941CF1889100FD07D1 /* ViewController */,
+				95F4742B1CFC499C00B2991F /* Moduls */,
+				952964BF1CEF455D0014C941 /* Main.storyboard */,
+				952964C71CEF455D0014C941 /* LaunchScreen.storyboard */,
+				952964C51CEF455D0014C941 /* Assets.xcassets */,
+				952964CA1CEF455D0014C941 /* Info.plist */,
+				952CC7991CF189D900FD07D1 /* Library */,
+				952CC7971CF188F600FD07D1 /* ManagerCoreData */,
+			);
+			path = NotebookAnimal;
+			sourceTree = "<group>";
+		};
+		952964D21CEF455D0014C941 /* NotebookAnimalTests */ = {
+			isa = PBXGroup;
+			children = (
+				952964D31CEF455D0014C941 /* NotebookAnimalTests.swift */,
+				952964D51CEF455D0014C941 /* Info.plist */,
+			);
+			path = NotebookAnimalTests;
+			sourceTree = "<group>";
+		};
+		952964DD1CEF455D0014C941 /* NotebookAnimalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				952964DE1CEF455D0014C941 /* NotebookAnimalUITests.swift */,
+				952964E01CEF455D0014C941 /* Info.plist */,
+			);
+			path = NotebookAnimalUITests;
+			sourceTree = "<group>";
+		};
+		952CC7941CF1889100FD07D1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				952964BD1CEF455D0014C941 /* AddPet.swift */,
+				95284ADB1CF0844E00D53D27 /* FireBasePetTable.swift */,
+				952CC7961CF188D300FD07D1 /* FireBaseNotebookPetTableCell */,
+				95284ACE1CF014F200D53D27 /* PetTable.swift */,
+				952CC7951CF188A600FD07D1 /* NotebookPetTableCell */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		952CC7951CF188A600FD07D1 /* NotebookPetTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				95284AD21CF0216800D53D27 /* PetTableCell.swift */,
+			);
+			name = NotebookPetTableCell;
+			sourceTree = "<group>";
+		};
+		952CC7961CF188D300FD07D1 /* FireBaseNotebookPetTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				95284ADD1CF0847800D53D27 /* FireBasePetTableCell.swift */,
+			);
+			name = FireBaseNotebookPetTableCell;
+			sourceTree = "<group>";
+		};
+		952CC7971CF188F600FD07D1 /* ManagerCoreData */ = {
+			isa = PBXGroup;
+			children = (
+				952964C21CEF455D0014C941 /* NotebookAnimal.xcdatamodeld */,
+				95F8E2371CF626E9000F5E97 /* KindOfAnimal+CoreDataProperties.swift */,
+				95F8E2381CF626E9000F5E97 /* KindOfAnimal.swift */,
+				95F8E2391CF626E9000F5E97 /* NotebookAnimal+CoreDataProperties.swift */,
+				95F8E23A1CF626E9000F5E97 /* NotebookAnimal.swift */,
+			);
+			name = ManagerCoreData;
+			sourceTree = "<group>";
+		};
+		952CC7991CF189D900FD07D1 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				95284ADA1CF06FB600D53D27 /* NotebookAnimal.entitlements */,
+				95284AD81CF02C5C00D53D27 /* CloudKit.framework */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		95F4742B1CFC499C00B2991F /* Moduls */ = {
+			isa = PBXGroup;
+			children = (
+				952F84391CFB296200640CFA /* Kinds.swift */,
+				953EB9891CF956C000102B82 /* Pets.swift */,
+			);
+			name = Moduls;
+			sourceTree = "<group>";
+		};
+		BAC09AE41FC893BC09FA6AD4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C2DCC14B496EEE0A77C95C6 /* Pods.debug.xcconfig */,
+				DF075CB2459442811680C862 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DE7E3F91A82C33C58CFC039D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				953EB9871CF9545300102B82 /* Firebase.framework */,
+				955AE50F1CF86D6600902398 /* Firebase.framework */,
+				955AE50D1CF86CB000902398 /* libFirebase.a */,
+				9C96D9AFA6AB970D34A58871 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		952964B71CEF455D0014C941 /* NotebookAnimal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 952964E31CEF455D0014C941 /* Build configuration list for PBXNativeTarget "NotebookAnimal" */;
+			buildPhases = (
+				92333F15100003D7A52EEE36 /* Check Pods Manifest.lock */,
+				952964B41CEF455D0014C941 /* Sources */,
+				952964B51CEF455D0014C941 /* Frameworks */,
+				952964B61CEF455D0014C941 /* Resources */,
+				9FBFC4A1C97F8251D589058B /* Copy Pods Resources */,
+				2DC7B1332EC17E510C620A01 /* Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotebookAnimal;
+			productName = NotebookAnimal;
+			productReference = 952964B81CEF455D0014C941 /* NotebookAnimal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		952964CE1CEF455D0014C941 /* NotebookAnimalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 952964E61CEF455D0014C941 /* Build configuration list for PBXNativeTarget "NotebookAnimalTests" */;
+			buildPhases = (
+				952964CB1CEF455D0014C941 /* Sources */,
+				952964CC1CEF455D0014C941 /* Frameworks */,
+				952964CD1CEF455D0014C941 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				952964D11CEF455D0014C941 /* PBXTargetDependency */,
+			);
+			name = NotebookAnimalTests;
+			productName = NotebookAnimalTests;
+			productReference = 952964CF1CEF455D0014C941 /* NotebookAnimalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		952964D91CEF455D0014C941 /* NotebookAnimalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 952964E91CEF455D0014C941 /* Build configuration list for PBXNativeTarget "NotebookAnimalUITests" */;
+			buildPhases = (
+				952964D61CEF455D0014C941 /* Sources */,
+				952964D71CEF455D0014C941 /* Frameworks */,
+				952964D81CEF455D0014C941 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				952964DC1CEF455D0014C941 /* PBXTargetDependency */,
+			);
+			name = NotebookAnimalUITests;
+			productName = NotebookAnimalUITests;
+			productReference = 952964DA1CEF455D0014C941 /* NotebookAnimalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		952964B01CEF455D0014C941 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Nikolay;
+				TargetAttributes = {
+					952964B71CEF455D0014C941 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = A9G633CX8P;
+					};
+					952964CE1CEF455D0014C941 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 952964B71CEF455D0014C941;
+					};
+					952964D91CEF455D0014C941 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 952964B71CEF455D0014C941;
+					};
+				};
+			};
+			buildConfigurationList = 952964B31CEF455D0014C941 /* Build configuration list for PBXProject "NotebookAnimal" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 952964AF1CEF455D0014C941;
+			productRefGroup = 952964B91CEF455D0014C941 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				952964B71CEF455D0014C941 /* NotebookAnimal */,
+				952964CE1CEF455D0014C941 /* NotebookAnimalTests */,
+				952964D91CEF455D0014C941 /* NotebookAnimalUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		952964B61CEF455D0014C941 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				952964C91CEF455D0014C941 /* LaunchScreen.storyboard in Resources */,
+				952964C61CEF455D0014C941 /* Assets.xcassets in Resources */,
+				952964C11CEF455D0014C941 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		952964CD1CEF455D0014C941 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		952964D81CEF455D0014C941 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2DC7B1332EC17E510C620A01 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92333F15100003D7A52EEE36 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9FBFC4A1C97F8251D589058B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		952964B41CEF455D0014C941 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95F8E23E1CF626E9000F5E97 /* NotebookAnimal.swift in Sources */,
+				95F8E23D1CF626E9000F5E97 /* NotebookAnimal+CoreDataProperties.swift in Sources */,
+				95F8E23B1CF626E9000F5E97 /* KindOfAnimal+CoreDataProperties.swift in Sources */,
+				95F8E23C1CF626E9000F5E97 /* KindOfAnimal.swift in Sources */,
+				95284ADC1CF0844E00D53D27 /* FireBasePetTable.swift in Sources */,
+				953EB98A1CF956C000102B82 /* Pets.swift in Sources */,
+				95284ADE1CF0847800D53D27 /* FireBasePetTableCell.swift in Sources */,
+				952F843A1CFB296200640CFA /* Kinds.swift in Sources */,
+				95284AD31CF0216800D53D27 /* PetTableCell.swift in Sources */,
+				952964BE1CEF455D0014C941 /* AddPet.swift in Sources */,
+				952964C41CEF455D0014C941 /* NotebookAnimal.xcdatamodeld in Sources */,
+				95284ACF1CF014F200D53D27 /* PetTable.swift in Sources */,
+				952964BC1CEF455D0014C941 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		952964CB1CEF455D0014C941 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				952964D41CEF455D0014C941 /* NotebookAnimalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		952964D61CEF455D0014C941 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				952964DF1CEF455D0014C941 /* NotebookAnimalUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		952964D11CEF455D0014C941 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 952964B71CEF455D0014C941 /* NotebookAnimal */;
+			targetProxy = 952964D01CEF455D0014C941 /* PBXContainerItemProxy */;
+		};
+		952964DC1CEF455D0014C941 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 952964B71CEF455D0014C941 /* NotebookAnimal */;
+			targetProxy = 952964DB1CEF455D0014C941 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		952964BF1CEF455D0014C941 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				952964C01CEF455D0014C941 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		952964C71CEF455D0014C941 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				952964C81CEF455D0014C941 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		952964E11CEF455D0014C941 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		952964E21CEF455D0014C941 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		952964E41CEF455D0014C941 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C2DCC14B496EEE0A77C95C6 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NotebookAnimal/NotebookAnimal.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/Firebase",
+					"$(PROJECT_DIR)/DerivedData/NotebookAnimal/Build/Products/Debug-iphonesimulator",
+				);
+				INFOPLIST_FILE = NotebookAnimal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DerivedData/NotebookAnimal/Build/Products/Debug-iphonesimulator",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Umbrella.NotebookAnimal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		952964E51CEF455D0014C941 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF075CB2459442811680C862 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NotebookAnimal/NotebookAnimal.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/Firebase",
+					"$(PROJECT_DIR)/DerivedData/NotebookAnimal/Build/Products/Debug-iphonesimulator",
+				);
+				INFOPLIST_FILE = NotebookAnimal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DerivedData/NotebookAnimal/Build/Products/Debug-iphonesimulator",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Umbrella.NotebookAnimal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		952964E71CEF455D0014C941 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NotebookAnimalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Umbrella.NotebookAnimalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NotebookAnimal.app/NotebookAnimal";
+			};
+			name = Debug;
+		};
+		952964E81CEF455D0014C941 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NotebookAnimalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Umbrella.NotebookAnimalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NotebookAnimal.app/NotebookAnimal";
+			};
+			name = Release;
+		};
+		952964EA1CEF455D0014C941 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NotebookAnimalUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Umbrella.NotebookAnimalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = NotebookAnimal;
+			};
+			name = Debug;
+		};
+		952964EB1CEF455D0014C941 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NotebookAnimalUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Umbrella.NotebookAnimalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = NotebookAnimal;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		952964B31CEF455D0014C941 /* Build configuration list for PBXProject "NotebookAnimal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				952964E11CEF455D0014C941 /* Debug */,
+				952964E21CEF455D0014C941 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		952964E31CEF455D0014C941 /* Build configuration list for PBXNativeTarget "NotebookAnimal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				952964E41CEF455D0014C941 /* Debug */,
+				952964E51CEF455D0014C941 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		952964E61CEF455D0014C941 /* Build configuration list for PBXNativeTarget "NotebookAnimalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				952964E71CEF455D0014C941 /* Debug */,
+				952964E81CEF455D0014C941 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		952964E91CEF455D0014C941 /* Build configuration list for PBXNativeTarget "NotebookAnimalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				952964EA1CEF455D0014C941 /* Debug */,
+				952964EB1CEF455D0014C941 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		952964C21CEF455D0014C941 /* NotebookAnimal.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				952964C31CEF455D0014C941 /* NotebookAnimal.xcdatamodel */,
+			);
+			currentVersion = 952964C31CEF455D0014C941 /* NotebookAnimal.xcdatamodel */;
+			path = NotebookAnimal.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 952964B01CEF455D0014C941 /* Project object */;
+}

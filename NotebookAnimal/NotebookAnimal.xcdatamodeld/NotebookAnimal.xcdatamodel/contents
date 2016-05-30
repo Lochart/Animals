@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15D21" minimumToolsVersion="Automatic">
+    <entity name="KindOfAnimal" representedClassName=".KindOfAnimal" syncable="YES">
+        <attribute name="kind" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="notebookAnimal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NotebookAnimal" inverseName="kinds" inverseEntity="NotebookAnimal" syncable="YES"/>
+    </entity>
+    <entity name="NotebookAnimal" representedClassName=".NotebookAnimal" syncable="YES">
+        <attribute name="kindOfPet" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="namePet" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="kinds" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="KindOfAnimal" inverseName="notebookAnimal" inverseEntity="KindOfAnimal" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="KindOfAnimal" positionX="-29" positionY="17" width="128" height="73"/>
+        <element name="NotebookAnimal" positionX="-236" positionY="-0" width="128" height="88"/>
+    </elements>
+</model>
