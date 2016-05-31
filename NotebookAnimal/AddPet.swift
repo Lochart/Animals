@@ -33,7 +33,6 @@ class AddPet: UIViewController, UITextFieldDelegate, NSFetchedResultsControllerD
         super.viewDidLoad()
         loadDataFireBaseKind()
 
-
         let fetchRequest = NSFetchRequest(entityName: "KindOfAnimal")
         let sortDescriptor = NSSortDescriptor(key: "kind", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
@@ -49,7 +48,6 @@ class AddPet: UIViewController, UITextFieldDelegate, NSFetchedResultsControllerD
                 print(error)
             }
         }
-             NSLog("1: %p", fetchResultController)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -77,11 +75,18 @@ class AddPet: UIViewController, UITextFieldDelegate, NSFetchedResultsControllerD
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        if let sections = fetchResultController.sections {
+            return sections.count
+        }
+        return 0
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return kindOfAnimals.count
+        if let sections = fetchResultController.sections {
+            let sectionInfo = sections[section]
+            return sectionInfo.numberOfObjects
+        }
+        return 0
     }
     
     func tableView(tableView: UITableView!,
@@ -89,7 +94,7 @@ class AddPet: UIViewController, UITextFieldDelegate, NSFetchedResultsControllerD
         
         let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.Default, reuseIdentifier:tableIdentifier)
         
-        let kindOfAnimal = kindOfAnimals[indexPath.row]
+        let kindOfAnimal = fetchResultController.objectAtIndexPath(indexPath)
         
         cell.textLabel?.text = kindOfAnimal.kind
         
@@ -105,7 +110,6 @@ class AddPet: UIViewController, UITextFieldDelegate, NSFetchedResultsControllerD
     
     func controllerWillChangeContent(controller: NSFetchedResultsController) {
         kindTableView.beginUpdates()
-        NSLog("2: %p", controller)
     }
     
     func controller(controller: NSFetchedResultsController, didChangeSection sectionInfo: NSFetchedResultsSectionInfo, atIndex sectionIndex: Int, forChangeType type: NSFetchedResultsChangeType) {
@@ -120,29 +124,32 @@ class AddPet: UIViewController, UITextFieldDelegate, NSFetchedResultsControllerD
     }
     
     func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
-        switch type {
+        switch (type) {
         case .Insert:
-            if let _newIndexPath = newIndexPath {
-                kindTableView.insertRowsAtIndexPaths([_newIndexPath], withRowAnimation: .Fade)
-            }
-        case .Delete:
-            if let _newIndexPath = newIndexPath {
-                kindTableView.deleteRowsAtIndexPaths([_newIndexPath], withRowAnimation: .Fade)
-            }
-        case .Update:
-            if let _newIndexPath = newIndexPath {
-                kindTableView.reloadRowsAtIndexPaths([_newIndexPath], withRowAnimation: .Fade)
-            }
-        case .Move:
-            if let indexPath = indexPath {
-                if let newIndexPath = newIndexPath {
-                    kindTableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-                    kindTableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Fade)
-                }
-            }
+        if let indexPath = newIndexPath {
+            kindTableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
-        kindOfAnimals = controller.fetchedObjects as! [KindOfAnimal]
-        return
+        break;
+        case .Delete:
+        if let indexPath = indexPath {
+            kindTableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+        break;
+        case .Update:
+        if let indexPath = indexPath {
+            kindTableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+        break;
+        case .Move:
+        if let indexPath = indexPath {
+            kindTableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+        
+        if let newIndexPath = newIndexPath {
+            kindTableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Fade)
+        }
+        break;
+    }
 
     }
     
@@ -186,18 +193,18 @@ class AddPet: UIViewController, UITextFieldDelegate, NSFetchedResultsControllerD
     
     func loadDataFireBaseKind(){
         
-        firebaseKind.observeEventType(FEventType.Value, withBlock: { (snapshot) in
-            self.deleteAllData("KindOfAnimal")
+        firebaseKind.observeEventType(FEventType.Value, withBlock: { [weak self] (snapshot) in
+            self?.deleteAllData("KindOfAnimal")
             
             for list in snapshot.children {
                 let kindList = Kinds(snapshot: list as! FDataSnapshot)
-               
+                
                 if let managedObjectContext = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext {
-
-                    self.kindAnimal = NSEntityDescription.insertNewObjectForEntityForName("KindOfAnimal", inManagedObjectContext: managedObjectContext) as! KindOfAnimal
-             
-                    self.kindAnimal.kind = kindList.kind;
-
+                    
+                    self?.kindAnimal = NSEntityDescription.insertNewObjectForEntityForName("KindOfAnimal", inManagedObjectContext: managedObjectContext) as! KindOfAnimal
+                    
+                    self?.kindAnimal.kind = kindList.kind;
+                    
                     do {
                         try managedObjectContext.save()
                     } catch {
@@ -234,6 +241,7 @@ class AddPet: UIViewController, UITextFieldDelegate, NSFetchedResultsControllerD
     }
     
     deinit{
+        NSLog("deinit %p", self)
         fetchResultController.delegate = nil
     }
     

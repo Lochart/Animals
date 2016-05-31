@@ -116,7 +116,6 @@ class PetTable: UITableViewController, NSFetchedResultsControllerDelegate {
         return [deleteAction]
     }
     
-
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
     }
